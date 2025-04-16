@@ -72,3 +72,28 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.headerBoxDetailsIISocials{
+    display: flex;
+    height: 10%;
+    margin-top: 10px;
+    /* background-color: rgb(0, 157, 255); */
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerBoxDetailsIISocials ul{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.headerBoxDetailsIISocials ul li{
+
+    position: relative;
+    right: 120%;
+}
+
+.headerBoxDetailsIISocials ul li a img{
+    height: 30px;   
+}
