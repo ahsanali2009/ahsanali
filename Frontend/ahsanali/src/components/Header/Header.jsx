@@ -9,7 +9,6 @@ export default function Header(){
             <div className={styles.navigationBox}>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">Blogs</a></li>
                     <li><a href="/">@me</a></li>
                 </ul>
             </div>
@@ -17,13 +16,6 @@ export default function Header(){
                 <div className={styles.headerBoxDetailsII}>
                     <h1>ahsan.</h1>
                     <h3>Figuring Things Out.</h3>
-
-                    <div className={styles.headerBoxDetailsIISocials}>
-                        <ul>
-                            <li><a href="https://github.com/ahsanali2009" target="_blank"><img src="/src/assets/github.png" alt="github" /></a></li> 
-                        </ul>
-                    </div>
-
                 </div>
             </div>
         </div>
