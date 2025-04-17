@@ -1,0 +1,27 @@
+.homeButton a{
+    text-decoration: none;
+    color: white;
+}
+
+.homeButton{
+    height: 60px;
+    width: 100%;
+    background-color: #006eff;
+    border: solid 1px black;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NotFoundPageh2{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.NotFoundPageP{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+}
