@@ -9,7 +9,7 @@ export default function Header(){
             <div className={styles.navigationBox}>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">@me</a></li>
+                    <li><a href="/about">@me</a></li>
                 </ul>
             </div>
             <div className={styles.headerBoxDetails}>
