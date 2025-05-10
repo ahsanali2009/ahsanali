@@ -1,6 +1,7 @@
 var http = require('http');
 require('dotenv').config()
-const crypto = require('crypto');
+
+const mainDBconnection = require('./db.js');
 
 let generatePath = (Math.random()*1000).toFixed(0)
 
@@ -43,7 +44,12 @@ http.createServer( async (req, res) => {
 
         req.on('end', () => {
             const data = Buffer.concat(chunks)
-            console.log(data.toString())
+
+            let JSONData = JSON.parse(data.toString()) 
+            console.log(JSONData)
+
+            mainDBconnection(JSONData['title'], JSONData['blog_content'], JSONData['title'].replace(/ /g, '+'))
+
             res.write(data)
             res.end()
         })
