@@ -1,7 +1,8 @@
 var http = require('http');
 require('dotenv').config()
 
-const mainDBconnection = require('./db.js');
+const mainDB = require('./db.js');
+
 
 let generatePath = (Math.random()*1000).toFixed(0)
 
@@ -11,8 +12,7 @@ http.createServer( async (req, res) => {
 
     if(req.url == "/" && req.method === "GET"){
         
-            console.log("api hit")
-            res.write("HELLO WORLD");
+            res.write("/home");
             res.end();
             
         } else if(req.url == '/api/admin' && req.method == "GET"){
@@ -48,11 +48,20 @@ http.createServer( async (req, res) => {
             let JSONData = JSON.parse(data.toString()) 
             console.log(JSONData)
 
-            mainDBconnection(JSONData['title'], JSONData['blog_content'], JSONData['title'].replace(/ /g, '+'))
+            mainDB('post_blog', JSONData['title'], JSONData['blog_content'], JSONData['title'].replace(/ /g, '+'))
 
             res.write(data)
             res.end()
         })
+
+    } else if(req.method === "GET" && req.url === "/api/get/blogs"){
+     
+        let fetchAllBlogs = await mainDB('get_blogs')
+
+
+        res.write(JSON.stringify(await {fetchAllBlogs}))
+        
+        res.end()
 
     }
 
