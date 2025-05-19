@@ -17,7 +17,6 @@ http.createServer( async (req, res) => {
             
         } else if(req.url == '/api/admin' && req.method == "GET"){
             
-            console.log("api hit")
                 res.write( JSON.stringify({
                     password : process.env.PASSWORD,
                 }) )
@@ -58,9 +57,9 @@ http.createServer( async (req, res) => {
      
         let fetchAllBlogs = await mainDB('get_blogs')
 
+        console.log(fetchAllBlogs)
 
-        res.write(JSON.stringify(await {fetchAllBlogs}))
-        
+        res.write(JSON.stringify({fetchAllBlogs}))
         res.end()
 
     }
