@@ -1,23 +1,25 @@
 import Header from '/src/components/Header/Header.jsx'
-import { useEffect } from 'react'
+import styles from '/src/Pages/Home.module.css'
+import BlogLayout from '../components/BlogLayout/BlogLayout'
 
 export default function Home(){
-
-    useEffect(() => {
-        async function fetchBlogData(){
-            console.log("Working api")
-            let data = await fetch("http://localhost:8000/")
-            console.log(data)
-        }
-        fetchBlogData()
-    })
 
 
     return(
         <>
         
-        <Header/>
-        
+            <Header/>
+        <br />
+            <div className={styles.searchBlogDiv}>
+                <input type="text" placeholder=' Search...'/>
+            </div>
+
+            <div className={styles.blogsContainer}>
+
+            <BlogLayout/>
+
+            </div>
+
         </>
     )
 }
