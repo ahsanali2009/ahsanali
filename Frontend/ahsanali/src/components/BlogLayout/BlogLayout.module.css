@@ -1,0 +1,66 @@
+.blogLayoutDiv{
+    height: 25vh;
+    width: 90%;  
+    margin-top:10px ;
+    border-bottom: 1px solid black;
+}
+
+
+.blogLayoutDivTitle{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    height: 10%;
+}
+
+.blogLayoutDivTitle h3{
+    font-weight: 500;
+}
+
+.blogLayoutDivContent{
+    height: 50%;
+    width: 100%;
+    /* background-color: red; */
+    color: rgb(132, 126, 126);
+}
+
+.blogLayoutDivContent p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.blogLayoutDiv:hover{
+    background-color: #c0c0c022;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media screen and (max-width : 1235px) {
+    .blogLayoutDiv{
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width : 920px) {
+    .blogLayoutDiv{
+        height: 35vh;
+        gap: 10vh;
+    }
+    
+}
+
+@media screen and (max-width : 750px) {
+    .blogLayoutDiv{
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width : 560px) {
+    .blogLayoutDiv{
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width : 470px) {
+    .blogLayoutDiv{
+        height: 55vh;
+    }
+}
