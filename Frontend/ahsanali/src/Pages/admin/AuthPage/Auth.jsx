@@ -1,4 +1,3 @@
-import axios from "axios";
 import { fetchGeneratePath } from "./fetchGeneratePath";
 import { useParams } from "react-router-dom";
 
@@ -6,7 +5,7 @@ export default function AuthPage(){
 
         var password ;
             async function fetchAdminDataAndAuthenticate(event){
-                event.preventDefault()
+                // event.preventDefault()
                 let response = await fetch('http://localhost:8000/api/admin')
                 let responseJSON = await response.json()
                 var password = document.getElementById("login-form-password").value
