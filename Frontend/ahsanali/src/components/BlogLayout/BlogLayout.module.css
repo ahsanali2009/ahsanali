@@ -5,11 +5,14 @@
     border-bottom: 1px solid black;
 }
 
-
 .blogLayoutDivTitle{
     color: black;
     font-family: 'Poppins', sans-serif;
     height: 10%;
+}
+
+.blogLayoutDivTitleahref{
+    text-decoration-color: black;
 }
 
 .blogLayoutDivTitle h3{
