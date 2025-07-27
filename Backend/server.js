@@ -1,7 +1,8 @@
 var http = require('http');
 require('dotenv').config()
-
+let url = require('url')
 const mainDB = require('./db.js');
+const { json } = require('stream/consumers');
 
 
 let generatePath = (Math.random()*1000).toFixed(0)
@@ -15,12 +16,12 @@ http.createServer( async (req, res) => {
             res.write("/home");
             res.end();
             
-        } else if(req.url == '/api/admin' && req.method == "GET"){
+    } else if(req.url == '/api/admin' && req.method == "GET"){
             
-                res.write( JSON.stringify({
-                    password : process.env.PASSWORD,
-                }) )
-                res.end()
+            res.write( JSON.stringify({
+                password : process.env.PASSWORD,
+            }) )
+            res.end()
 
     } else if(req.url === "/api/admin/generate_path" && req.method === "GET"){
 
@@ -34,7 +35,7 @@ http.createServer( async (req, res) => {
 
     } else if(req.url === `/api/admin/upload` && req.method === "POST"){
 
-        let chunks = []
+        let chunks = [] 
 
 
         req.on('data', (chunk) => {
@@ -57,12 +58,10 @@ http.createServer( async (req, res) => {
      
         let fetchAllBlogs = await mainDB('get_blogs')
 
-        console.log(fetchAllBlogs)
-
         res.write(JSON.stringify({fetchAllBlogs}))
         res.end()
-
-    }
+    
+    } 
 
 
 }).listen(8000)
