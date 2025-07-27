@@ -1,12 +1,9 @@
 import { useEffect } from 'react'
 import styles from './BlogLayout.module.css'
 import { getPathOfBlogClicked } from '../../utils/getPath_BlogClicked'
-import { Link } from 'react-router-dom'
 
 export default function BlogLayout(props){
 
-    
-    // props['object']['title']
 
     return(
         <>

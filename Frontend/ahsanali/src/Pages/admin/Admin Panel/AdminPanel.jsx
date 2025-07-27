@@ -27,8 +27,7 @@ async function saveBlogDB(event){
         
     })
     
-    console.log(blog_title, blog_content)
-
+    
 }
 
     return(

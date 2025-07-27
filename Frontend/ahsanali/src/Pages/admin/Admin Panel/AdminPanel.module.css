@@ -1,0 +1,26 @@
+.createBlogContainer{
+    height: 100vh;
+    /* display: flex; */
+}
+
+.createBlogContainerTitle{
+    width: 70%;
+    height: 6vh;
+    border: 2px solid black;
+    font-size: 20px;
+
+}
+
+.createBlogContainerTextarea{
+    min-height: 50vh;
+    min-width: 99%;
+}
+.createBlogContainerButton{
+    background-color: rgb(41, 174, 218);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid black;
+    border-radius: 3%;
+    height: 40px;
+    float: right;
+}

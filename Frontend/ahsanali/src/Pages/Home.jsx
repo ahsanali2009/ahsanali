@@ -8,30 +8,34 @@ import LoadingComponent from '../components/mini-components/loadingComponent'
 export default function Home(){
 
     let [blogData, blogDataState] = useState([])
-    getBlogsApiFunc().then((res) => {blogDataState(res)})
+    useEffect(() => {
+        getBlogsApiFunc().then((res) => {blogDataState(res)})
+
+    }, [])
 
         let tempBlogStore = []
+
 
         if(blogData.length !== 0){
             // console.log(blogData['fetchAllBlogs'])
             for(let i = 0 ; i < blogData['fetchAllBlogs'].length ; i++){
                 // console.log(blogData['fetchAllBlogs'][i])
                 tempBlogStore.push(<BlogLayout key={i} object= {blogData['fetchAllBlogs'][i]}/>)
+                
+                if(tempBlogStore.length === blogData.length){break}
             }
         }
-
-        // console.log(tempBlogStore)
 
 
     return(
         <>
         
             <Header/>
-            <br />
+            <br /> 
 
-            <div className={styles.searchBlogDiv}>
+            {/* <div className={styles.searchBlogDiv}>
                 <input type="text" placeholder=' Search...'/>
-            </div>
+            </div> */}
 
             <div className={styles.blogsContainer}>
 
