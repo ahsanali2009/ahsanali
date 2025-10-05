@@ -1,5 +1,4 @@
 var http = require('http');
-require('dotenv').config()
 let url = require('url')
 const mainDB = require('./db.js');
 const { json } = require('stream/consumers');

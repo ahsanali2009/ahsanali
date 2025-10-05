@@ -1,5 +1,5 @@
 .blogLayoutDiv{
-    height: 25vh;
+    /* height: 10vh; */
     width: 90%;  
     margin-top:10px ;
     border-bottom: 1px solid black;
@@ -12,23 +12,16 @@
 }
 
 .blogLayoutDivTitleahref{
-    text-decoration-color: black;
+    text-decoration: none;
 }
 
 .blogLayoutDivTitle h3{
     font-weight: 500;
 }
 
-.blogLayoutDivContent{
-    height: 50%;
-    width: 100%;
-    /* background-color: red; */
-    color: rgb(132, 126, 126);
-}
 
-.blogLayoutDivContent p{
-    font-family: 'Poppins', sans-serif;
-}
+
+
 
 .blogLayoutDiv:hover{
     background-color: #c0c0c022;

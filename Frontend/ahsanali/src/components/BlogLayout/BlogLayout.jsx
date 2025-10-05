@@ -14,9 +14,6 @@ export default function BlogLayout(props){
                 <h3>{props['object']['title']}</h3>
             </div>
         </a>
-            <div className={styles.blogLayoutDivContent}>
-                <p>{props['object']['blog_content']}</p>
-            </div>
         </div>
         </>
     )
