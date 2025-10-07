@@ -2,6 +2,7 @@ var http = require('http');
 let url = require('url')
 const mainDB = require('./db.js');
 const { json } = require('stream/consumers');
+require('dotenv').config();
 
 
 let generatePath = (Math.random()*1000).toFixed(0)
@@ -63,4 +64,4 @@ http.createServer( async (req, res) => {
     } 
 
 
-}).listen(8000)
+}).listen(process.env.PORT)
