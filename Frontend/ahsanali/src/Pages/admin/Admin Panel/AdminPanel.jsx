@@ -16,7 +16,7 @@ async function saveBlogDB(event){
 
     let spreadPayload = [...payload]
 
-    fetch('http://localhost:8000/api/admin/upload', {
+    fetch('https://ahsanali-backend.onrender.com/api/admin/upload', {
         method : "POST",
         body : JSON.stringify(
             {
@@ -35,7 +35,7 @@ async function saveBlogDB(event){
 
         <div className={styles.createBlogContainer}>
 
-            <form id='form' action='http://localhost:8000/api/admin/upload' method='post' encType='application/x-www-form-urlencoded'>
+            <form id='form' action='https://ahsanali-backend.onrender.com/api/admin/upload' method='post' encType='application/x-www-form-urlencoded'>
 
             <input id='form_blog_title' placeholder='Title' type="text" className={styles.createBlogContainerTitle} name='title' /><br /><br />
             <textarea id='form_blog_content' placeholder='Content' className={styles.createBlogContainerTextarea} name='blog_content'></textarea>

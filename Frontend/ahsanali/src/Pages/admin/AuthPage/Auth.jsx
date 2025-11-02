@@ -6,7 +6,7 @@ export default function AuthPage(){
         var password ;
             async function fetchAdminDataAndAuthenticate(event){
                 // event.preventDefault()
-                let response = await fetch('http://localhost:8000/api/admin')
+                let response = await fetch('https://ahsanali-backend.onrender.com/api/admin')
                 let responseJSON = await response.json()
                 var password = document.getElementById("login-form-password").value
 
@@ -14,7 +14,7 @@ export default function AuthPage(){
                 if(password == responseJSON['password']){
 
                     
-                    window.location = `http://localhost:5173/admin/${await fetchGeneratePath()}`
+                    window.location = `https://ahsanali-backend.onrender.com/admin/${await fetchGeneratePath()}`
 
                 } else { null; }
 
